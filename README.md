@@ -48,3 +48,28 @@ install:
 
 run:
 	python src/delay_prediction.py
+
+
+## 🚀 v2: Time-Series Holdout (2024 Train → 2025 Test)
+
+**New!** Linear Regression on Heathrow monthly data:
+- **Train:** 2024 delays + weather (dew, precip, wind dir)
+- **Test:** Unseen 2025 (R² 0.78, MAE ~2min)
+
+**Run:**
+
+
+
+**Needs CSVs:**
+- `master sheet 24.csv` (2024 delays)
+- `Copy of Master Punctuality sheet (2025) - processed - Sheet1.csv`
+- `Weather Data Top 10 UK Airports 2010-2025 (processed) - Weather data.csv`
+
+**Output:** Metrics + `2025_validation.png`
+
+![v2 Plot](2025_validation.png)
+
+pandas
+numpy
+scikit-learn
+matplotlib
